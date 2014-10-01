@@ -150,32 +150,15 @@ add_action( 'wp_enqueue_scripts', 'armagen_fonts', 10 );
 function armagen_widgets_init() {
 
 	register_sidebar( array (
-		'name' => __( 'Sidebar', 'armagen' ),
-		'id' => 'sidebar',
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => "</li>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'name'            => __( 'Sidebar', 'armagen' ),
+		'id'              => 'sidebar',
+		'before_widget'   => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget'    => "</li>",
+		'before_title'    => '<h3 class="widget-title">',
+		'after_title'     => '</h3>',
 	) );
 }
 add_action( 'init', 'armagen_widgets_init' );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -189,23 +172,25 @@ add_action( 'init', 'create_post_type_news' );
 function create_post_type_news() {
 register_post_type( 'News',
     array(
-      'labels' => array(
-        'name' => __( 'News' ),
-        'singular_name' => __( 'News' ),		
-		'add_new' => _x( 'Add News Item', 'News' ),
-		'add_new_item' => __( 'Add News Item' ),
-		'edit_item' => __( 'Edit News' ),
-		'new_item' => __( 'New News Item' ),
-		'view_item' => __( 'View News' ),
-		'search_items' => __( 'Search News' ),
-		'not_found' =>  __( 'No News found' ),
-		'not_found_in_trash' => __( 'No News found in Trash' ),
-		'parent_item_colon' => ''
-      ),
-      'public' => true,
-	  'supports' => array('title','editor','thumbnail' ),
-	  'query_var' => true,
-	  'rewrite' => array( 'slug' => 'news' ),
+        'labels'             => array(
+        'name'               => __( 'News' ),
+        'singular_name'      => __( 'News' ),		
+    	'add_new'            => _x( 'Add News Item', 'News' ),
+    	'add_new_item'       => __( 'Add News Item' ),
+    	'edit_item'          => __( 'Edit News' ),
+    	'new_item'           => __( 'New News Item' ),
+    	'view_item'          => __( 'View News' ),
+    	'search_items'       => __( 'Search News' ),
+    	'not_found'          =>  __( 'No News found' ),
+    	'not_found_in_trash' => __( 'No News found in Trash' ),
+    	'parent_item_colon'  => ''
+    ),
+    'public'    => true,
+    'supports'  => array('title','editor','thumbnail' ),
+    'query_var' => true,
+    'rewrite'   => array( 
+        'slug' => 'news'
+        ),
     )
   );
 }
@@ -216,41 +201,28 @@ add_action( 'init', 'create_post_type_compounds' );
 function create_post_type_compounds() {
 register_post_type( 'Compounds',
     array(
-      'labels' => array(
-        'name' => __( 'Compounds' ),
-        'singular_name' => __( 'Compounds' ),		
-		'add_new' => _x( 'Add Compound', 'Compound' ),
-		'add_new_item' => __( 'Add Compound' ),
-		'edit_item' => __( 'Edit Compound' ),
-		'new_item' => __( 'New Compound' ),
-		'view_item' => __( 'View Compound' ),
-		'search_items' => __( 'Search Compounds' ),
-		'not_found' =>  __( 'No Compounds found' ),
+        'labels'             => array(
+        'name'               => __( 'Compounds' ),
+        'singular_name'      => __( 'Compounds' ),		
+		'add_new'            => _x( 'Add Compound', 'Compound' ),
+		'add_new_item'       => __( 'Add Compound' ),
+		'edit_item'          => __( 'Edit Compound' ),
+		'new_item'           => __( 'New Compound' ),
+		'view_item'          => __( 'View Compound' ),
+		'search_items'       => __( 'Search Compounds' ),
+		'not_found'          =>  __( 'No Compounds found' ),
 		'not_found_in_trash' => __( 'No Compounds found in Trash' ),
-		'parent_item_colon' => ''
-      ),
-      'public' => true,
-	  'supports' => array('title','editor','thumbnail' ),
-	  'query_var' => true,
-	  'rewrite' => array( 'slug' => 'compounds' ),
+		'parent_item_colon'  => ''
+    ),
+    'public'    => true,
+    'supports'  => array('title','editor','thumbnail' ),
+    'query_var' => true,
+    'rewrite'   => array( 
+        'slug' => 'compounds'
+        ),
     )
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -279,16 +251,6 @@ add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_or
 add_filter('menu_order', 'custom_menu_order');  
 
 
-
-
-
-
-
-
-
-
-
-
 /*-----------------------------------------------------------------------------------*/
 /*	Adds the media attachement ID to the Media Library listing
 /*-----------------------------------------------------------------------------------*/
@@ -303,13 +265,6 @@ function column_id_row($columnName, $columnID){
     }
 }
 add_filter( 'manage_media_custom_column', 'column_id_row', 10, 2 );
-
-
-
-
-
-
-
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -330,12 +285,6 @@ function roots_head_cleanup() {
 add_action('init', 'roots_head_cleanup');
 
 
-
-
-
-
-
-
 /*------------------------------------------------*/
 /*---------[CUSTOM HOME PAGE STYLES]--------------*/
 /*------------------------------------------------*/
@@ -349,9 +298,4 @@ function homepage_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'homepage_scripts');
-
-
-
-
-
 

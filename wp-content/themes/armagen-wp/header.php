@@ -26,6 +26,7 @@
 
 <body <?php body_class(); ?>>
 <div id="wrapper">
+    <div class="colorbar"></div>
 	<header id="branding" class="header clearfix" role="banner">
         <hgroup id="logo">
             <a href="<?php echo home_url(); ?>" title="ArmaGen Technologies">

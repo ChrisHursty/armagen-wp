@@ -1,14 +1,5 @@
 /* Home Page Specific Styles */
 
-/* Home Hero Image
------------------------------------------------ */
-
-.home-hero {
-  height: 320px;
-  background: #ea6e1f;
-}
-
-
 /* Secondary Navigation
 ----------------------------------------------- */
 .secondary-navigation {
@@ -142,3 +133,47 @@
   }
 }
 /* END NAV */
+
+
+/* Home Hero Image
+----------------------------------------------- */
+
+.home-hero {
+  height: 380px;
+  background: url(images/home-hero.jpg);
+  background-size: cover;
+}
+
+.home-hero-title {
+  width: 50%;
+  margin-left: 15%;
+  padding-top: 75px;
+}
+
+h2.home-title {
+  color: #fff;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* News & Excerpt Section, under Hero Image on front-page.php
+----------------------------------------------------------- */
+
+.one-third {
+  width: 32%;
+  float: left;
+}
+
+.news-home {
+  background:#e6e1d8 url(images/bg_pattern_xy.png) center center;
+}
+.news-home ul li {
+  float:left;
+  display:block;
+  width: 100%;
+  min-height: 205px;
+  padding: 0 45px;
+}
+
+
+
