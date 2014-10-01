@@ -1,0 +1,79 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Structure - Sections
+----------------------------------------------- */
+.header {
+	width:100%;
+	max-width:100%;
+	padding-left:0; padding-right:0;
+}
+.hero, .about-home, .technology-home, .mission-home, .footer {
+	width:100%;
+	max-width:100%;
+	padding-left:0; padding-right:0;
+}
+.about-home, .technology-home {
+	padding-top:115px; padding-bottom:115px;
+}
+.hero, .mission-home, .footer {
+	padding-top:80px; padding-bottom:80px;
+}
+
+
+
+
+
+
+
+/* Random
+----------------------------------------------- */
+.hero {
+	height:380px !important;
+	min-height:0 !important;
+}
+.news-home {
+	height:205px !important;
+}
+.news-home ul li {
+	height:205px !important;
+	max-height:205px !important;
+	min-height:0 !important;
+}
+.news-home ul li:first-child {
+	padding: 0 0 0 10% !important;
+}
+.news-home h3:before {
+	display: none;
+	content: "";
+	background: none;
+	width: 0px;
+	height: 0px;
+	margin: 0;
+	float: none;
+}
+	
+a.backtop {
+	display:none !important;
+}
+.footer {
+	font-size:12px !important;
+	font-size:1.2rem !important;
+}
+
+
+
+
+
+
+	
