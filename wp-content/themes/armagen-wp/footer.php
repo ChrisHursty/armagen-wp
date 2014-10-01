@@ -27,12 +27,12 @@
         </div>
 
         <div class="foot3">
-            <p class="col small caps coal">
+            <p class="col caps">
                 P: <a href="tel:8182528200" title="email">(818) 252-8200</a><br />
                 F: (818) 252-8214<br />
                 <a href="mailto:contact@armagen.com" title="email">contact@armagen.com</a>
             </p>
-            <p class="col small caps copper">
+            <p class="col caps">
                 26679 Agoura Road<br />
                 Suite 100<br />
                 Calabasas, CA 91302 
