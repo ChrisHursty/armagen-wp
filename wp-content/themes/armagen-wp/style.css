@@ -200,27 +200,27 @@ a:link, .mfp-close, .bbb {
 /* Branding
 ----------------------------------------------- */
 #branding {
-	background:#fff;
+	background: #fff;
 	position: relative;
-	height:150px;
+	height: 150px;
 	z-index: 8;
 	width: 100%;
 }
 #logo {
-	float:left;
-	margin-top:30px;
+	float: left;
+	margin-top: 30px;
 	margin-bottom: 15px;
-	padding-right:75px;	
+	padding-right: 75px;	
 	max-width: 100%;
-	line-height:1;
-	width:254px;
-	height:88px;
+	line-height: 1;
+	width: 254px;
+	height: 88px;
 }
 .logo-footer {
-	display:block;
-	width:254px;
-	height:88px;
-	margin-top:30px;
+	display: block;
+	width: 254px;
+	height: 88px;
+	margin-top: 30px;
 }
 #logo a h1, a.logo-footer h1 {
 	text-indent: -9999px;
@@ -654,6 +654,7 @@ a:link, .mfp-close, .bbb {
 
 /* Footer
 ----------------------------------------------- */
+
 .footer {
 	background: #5f5e5b url(images/bg_pattern_xy_dark.png);
 	position:relative;
@@ -662,33 +663,62 @@ a:link, .mfp-close, .bbb {
 		-moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.6);
 			box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,.6);
 }
+
 .footer p.col {
 	float:left;
-	width:50%;
+	width: 50%;
 	padding:0 15px 25px 20px;
-	line-height:26px;
+	line-height: 26px;
 }
+
 .footer, .footer p a {
 	color:#e6e1d8;
 }
+
 .footer p.col.coal {border-bottom:1px solid #869f9f;}
 .footer p.col.copper {border-bottom:1px solid #d2894e;}
 .footer p.colfull {
 	width: auto;
 	padding: 20px 15px 0 20px;
 }
+
 .footer p strong {
 	color:#fff;
 }
+
 .footer small {
 	display:inline-block;
 }
 
-.foot1, .foot2, .foot3 {
+.footer__left {
+	width: 35%;
+	float: left;
+}
+
+.footer__right {
+	width: 65%;
+	float: right;
+}
+
+.foot1 {
+	font-weight: normal;
 	position: relative;
 	float: left;
-	width: 33%;
 	display: block;
+}
+
+.foot2 {
+	font-weight: normal;
+	position: relative;
+	float: left;
+	width: 40%;
+}
+
+.foot3 {
+	font-weight: normal;
+	position: relative;
+	float: right;
+	width: 60%;
 }
 
 .footer__nav--primary, .footer__nav--secondary {
@@ -705,7 +735,13 @@ a:link, .mfp-close, .bbb {
 }
 
 .footer__nav--primary ul li a, .footer__nav--secondary ul li a {
+	font-weight: normal;
+	font-size: 1rem;
 	color: #fff;
+}
+
+.footer__nav--primary ul li a:hover, .footer__nav--secondary ul li a:hover {
+	color: #ea6e1f;
 }
 
 
@@ -1084,31 +1120,128 @@ a.backtop.rotate {
 		padding-top: 0px;
 		padding-bottom: 60px;
 	}
+
 /* Hero */
 	.hero {
 		background-position:40% bottom;
 	}
-	.hero-title {width:100%;}
+
+	.hero-title {
+		width:100%;
+	}
+
 /* Technology - home */
 	.technology-home .left {
 		float: none;
 		width: 100%;
 		padding-right: 15%;
 	}
+
 	.technology-home .right {
 		padding-left:0;
 		padding-right: 0;
 	}
+
 	.technology-home .right .frame {
 		width: 70%;
 		left: 15%;
 	}
+
 /* Col plugin fix */
 	.one_half.last_column {
 		padding-left: 0px;
 	}
-	.one_half p {padding-left:10%; padding-right:10%;}
-	.one_half.last_column p {padding-left:10% !important; padding-right:10%;}
+
+	.one_half p {
+		padding-left:10%; padding-right:10%;
+	}
+
+	.one_half.last_column p {
+		padding-left:10% !important; padding-right:10%;
+	}
+
+
+	/* Footer */
+
+	.footer {
+		padding: 20px 0;
+	}
+
+	.footer p.col {
+		float: left;
+		text-align: center;
+		width: 100%;
+		padding: 0;
+		line-height: 26px;
+	}
+
+	.footer, .footer p a {
+		color:#e6e1d8;
+	}
+
+	.footer p.col.coal {
+		border-bottom: 1px solid #869f9f;
+	}
+
+	.footer p.col.copper {
+		border-bottom: 1px solid #d2894e;
+	}
+
+	.footer p.colfull {
+		text-align: center;
+		width: auto;
+		padding: 0;
+		padding-top: 20px;
+	}
+
+	.footer__left {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.logo-footer, .logo-footer img {
+		width: 100%;
+	}
+
+	.footer__right {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.foot1 {
+		font-weight: normal;
+		position: relative;
+		float: left;
+		display: block;
+	}
+
+	.footer__nav--primary, .footer__nav--secondary {
+		text-align: center;
+		width: 100%;
+	}
+
+	.foot2 {
+		font-weight: normal;
+		position: relative;
+		padding: 20px 0;
+		width: 100%;
+		border-top: 1px solid #869f9f;
+		border-bottom: 1px solid #d2894e;
+	}
+
+	.foot3 {
+		font-weight: normal;
+		position: relative;
+		float: left;
+		width: 100%;
+	}
+
+	.footer p.col {
+		margin-bottom: 0;
+		padding: 20px 0;
+	}
 }
 
 
