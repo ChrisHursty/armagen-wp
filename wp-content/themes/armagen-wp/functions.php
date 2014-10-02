@@ -120,11 +120,6 @@ add_action( 'wp_enqueue_scripts', 'modal_enqueue_style' );
 
 
 
-
-
-
-
-
 /**
  * Loads webfonts from Google
  */
@@ -137,11 +132,6 @@ function armagen_fonts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'armagen_fonts', 10 );
-
-
-
-
-
 
 
 /**
@@ -172,9 +162,9 @@ add_action( 'init', 'create_post_type_news' );
 function create_post_type_news() {
 register_post_type( 'News',
     array(
-        'labels'             => array(
-        'name'               => __( 'News' ),
-        'singular_name'      => __( 'News' ),		
+      'labels'             => array(
+      'name'               => __( 'News' ),
+      'singular_name'      => __( 'News' ),		
     	'add_new'            => _x( 'Add News Item', 'News' ),
     	'add_new_item'       => __( 'Add News Item' ),
     	'edit_item'          => __( 'Edit News' ),
@@ -201,9 +191,9 @@ add_action( 'init', 'create_post_type_compounds' );
 function create_post_type_compounds() {
 register_post_type( 'Compounds',
     array(
-        'labels'             => array(
-        'name'               => __( 'Compounds' ),
-        'singular_name'      => __( 'Compounds' ),		
+    'labels'             => array(
+    'name'               => __( 'Compounds' ),
+    'singular_name'      => __( 'Compounds' ),		
 		'add_new'            => _x( 'Add Compound', 'Compound' ),
 		'add_new_item'       => __( 'Add Compound' ),
 		'edit_item'          => __( 'Edit Compound' ),
