@@ -5,7 +5,6 @@
 
  get_header(); ?>
 
-<main role="main">
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <?php 
@@ -15,17 +14,6 @@
             if ($hero) (string)$hero = $hero[0];
         }
         ?>
-
-        <div class="home-hero">
-            <div id="navigation" class="secondary-navigation" role="navigation">
-                <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
-            </div>
-            <div class="home-hero-title">
-                <h2 class="home-title"><?php the_field('hero_title'); ?></h2>
-                <a class="button" href="<?php the_field('hero_link'); ?>" target="_blank" title="<?php the_field('hero_link_text'); ?>"><?php the_field('hero_link_text'); ?></a>
-            </div>
-        </div>
-        <!-- # hero --> 
 
         <section class="news-home">
             <div class="clearfix">

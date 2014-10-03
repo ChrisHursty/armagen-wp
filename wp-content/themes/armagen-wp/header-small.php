@@ -1,6 +1,6 @@
 <?php
 /**
- * Header Template
+ * Custom Header - Small Hero
  *
  * @package ArmaGen
  */
@@ -27,7 +27,7 @@
 <body <?php body_class(); ?>>
 <div id="wrapper">
     <div class="colorbar"></div>
-	<header id="branding" class="header clearfix" role="banner">
+    <header id="branding" class="header clearfix" role="banner">
         <hgroup id="logo">
             <a href="<?php echo home_url(); ?>" title="ArmaGen Technologies">
                 <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
@@ -43,16 +43,16 @@
                 </a>
             <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
         </nav>
-	</header>
+    </header>
 
     <main role="main">
-        <div class="home-hero">
+        <div class="small-hero">
             <div id="navigation" class="secondary-navigation" role="navigation">
                 <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
             </div>
-            <div class="home-hero-title">
-                <h2 class="home-title"><?php the_field('hero_title'); ?></h2>
-                <a class="button" href="<?php the_field('hero_link'); ?>" target="_blank" title="<?php the_field('hero_link_text'); ?>"><?php the_field('hero_link_text'); ?></a>
+            <div class="small-hero-title">
+                <h2 class="small-title"><?php the_title(); ?></h2>
+        
             </div>
         </div>
         <!-- # hero -->

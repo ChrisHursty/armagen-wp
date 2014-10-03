@@ -113,13 +113,26 @@ h3 {
 	padding-bottom: 30px;
 	color:#ea6e1f;
 }
+
+h3.sub-title {
+	font-size: 24px; 
+	font-size: 2.4rem;
+	font-weight: 300;
+	padding: 30px 0 14px;
+	color: #ea6e1f;
+}
+
 h4, h5, h6 {
 	font-size: 1.8rem;
-}
-h4, h5, h6, p {
 	line-height: 135%;
 	padding-bottom: 15px;
 }
+
+p {
+	line-height: 150%;
+	padding-bottom: 15px;
+}
+
 .caption {
 	color:#fff !important;
 	background:#000;
@@ -357,6 +370,140 @@ a:link, .mfp-close, .bbb {
 }
 
 
+/* Secondary Navigation
+----------------------------------------------- */
+.secondary-navigation {
+  display: block;
+  text-transform: capitalize;
+  float: left;
+  clear: none;
+  padding: 0;
+  margin-right: 5%;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+.clear-menu .secondary-navigation {
+  float: right;
+  padding-top: 10px;
+}
+.secondary-navigation ul {
+  list-style: none;
+  margin: 0;
+}
+.secondary-navigation .menu-toggle {
+  display: none;
+  padding: 0;
+}
+.secondary-navigation .nav-menu {
+  border-bottom: 0;
+  display: block;
+  clear:both;
+  background:none;
+}
+.secondary-navigation li {
+  display: inline-block;
+  position: relative;
+}
+
+.secondary-navigation li.button {
+  border-left: 1px solid #d6d4cf;
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+.secondary-navigation a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  padding: 12px;
+  margin: 0;
+  -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+      border-radius: 8px;
+}
+.secondary-navigation ul li.current-menu-item > a, .secondary-navigation ul > li:hover > a {
+  background:#e6e1d8;
+  color:#ea6e1f;
+}
+.secondary-navigation ul li.button:hover > a {background:none !important;}
+.secondary-navigation ul ul {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 200px;
+  z-index: 200;
+  text-align: center;
+  background: #333;
+  border-radius: 3px;
+}
+.secondary-navigation ul ul:before {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  margin-left: -8px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #232323;
+  content: " ";
+}
+.secondary-navigation ul ul li {
+  border-bottom: solid 1px rgba(255,255,255,.1);
+  width: 100%;
+}
+.secondary-navigation ul ul li:last-child {border-bottom: none;}
+.secondary-navigation ul ul a {
+  padding: 12px 16px;
+  margin: 0;
+  font-weight: normal;
+  position: relative;
+  border-bottom: none;
+}
+.secondary-navigation ul ul a:before {content:"";}
+.secondary-navigation .menu-item-has-children > a,
+.secondary-navigation .page_item_has_children > a {
+  padding-right: 30px;
+}
+.secondary-navigation .menu-item-has-children > a:after,
+.secondary-navigation .page_item_has_children > a:after {
+  -webkit-font-smoothing: antialiased;
+  content: "\e806";
+  display: inline-block;
+  font: normal 13px/1 armagenCustom;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  vertical-align: text-bottom;
+}
+.secondary-navigation ul li:hover > ul {display: block;}
+.secondary-navigation ul ul .menu-item-has-children > a:after,
+.secondary-navigation ul ul .page_item_has_children > a:after {
+  content: "\e813";
+  right: 15px;
+  top: 50%;
+  margin-top:-7px;
+}
+.secondary-navigation ul ul ul:before {content: none;}
+.secondary-navigation ul ul ul {
+  top: 0;
+  left:200px;
+  width: 200px;
+}
+.secondary-navigation ul ul a {
+  padding: 8px 12px 8px 32px;
+}
+.secondary-navigation ul ul a:before {
+  content:"- ";
+}
+
+/* NAV ONLY */
+@media (max-width: 849px) {
+  .secondary-navigation {
+    display: none;
+  }
+}
+/* END NAV */
+
 
 /* Structure - Sections
 ----------------------------------------------- */
@@ -395,6 +542,60 @@ a:link, .mfp-close, .bbb {
 .hero h2 span {white-space:nowrap;}
 
 
+
+/* Hero Image - Medium
+----------------------------------------------- */
+
+.medium-hero {
+  height: 252px;
+  background: url(images/about-hero.jpg);
+  background-size: cover;
+}
+
+.medium-hero-title {
+  width: 50%;
+  margin-left: 15%;
+  padding-top: 100px;
+}
+
+h2.medium-title {
+  color: #fff;
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 3px;
+}
+
+
+
+/* Hero Image - Small
+----------------------------------------------- */
+
+.small-hero {
+  height: 140px;
+  background: #ea6e1f; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ea6e1f 0%, #5a6d68 50%, #686868 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ea6e1f), color-stop(50%,#5a6d68), color-stop(100%,#686868)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea6e1f', endColorstr='#686868',GradientType=1 ); /* IE6-9 */
+}
+
+.small-hero-title {
+  width: 50%;
+  margin-left: 15%;
+  padding-top: 50px;
+}
+
+h2.small-title {
+  color: #fff;
+  font-style: italic;
+  font-weight: 300;
+  margin-left: 3px;
+}
+
+
 /* News - home
 ----------------------------------------------- */
 .news-home {
@@ -415,9 +616,9 @@ a:link, .mfp-close, .bbb {
 }
 
 .news-home h3 {
-	padding-top:55px;
-	padding-right:30px;
-	color:#eb6d1f;
+	padding-top: 55px;
+	padding-right: 30px;
+	color: #eb6d1f;
 }
 .news-home h3:before {
 	content: "";
@@ -585,6 +786,17 @@ a:link, .mfp-close, .bbb {
 }
 .mission-home h4 {color:#fff;}
 .mission-home p {color:#e6e1d8;}
+
+
+
+/* Full-Width/Medium Header
+----------------------------------------------- */
+
+#primary {
+	margin-top: 45px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
 
 
 
