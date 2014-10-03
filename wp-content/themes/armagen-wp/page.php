@@ -1,11 +1,11 @@
 <?php
 /**
- * The template for displaying pages
+ * The default template for displaying pages
  *
  * @package ArmaGen
  */
 
-get_header(); ?>
+get_header( 'small' ); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
@@ -13,9 +13,6 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-				</header><!-- .entry-header -->
 
 				<div class="entry-content clearfix">
 					<?php the_content(); ?>
@@ -33,5 +30,4 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

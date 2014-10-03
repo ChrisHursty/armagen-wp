@@ -38,7 +38,8 @@ function armagen_setup() {
 	// This theme uses wp_nav_menu() in one location
 	register_nav_menus( array(
 			'primary'    => __( 'Primary Menu', 'armagen' ),
-            'secondary'  => __( 'Secondary Menu', 'armagen' )
+      'secondary'  => __( 'Secondary Menu', 'armagen' ),
+      'footer'     => __( 'Footer Navigation', 'armagen' )
 		) );
 
 	// Add default posts and comments RSS feed links to head

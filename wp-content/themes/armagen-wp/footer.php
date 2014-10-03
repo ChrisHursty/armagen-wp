@@ -19,10 +19,16 @@
     <div class="footer__right">
         <div class="foot2">
             <div class="footer__nav--primary">
-                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+                <?php wp_nav_menu( array( 
+                'theme_location' => 'footer', 
+                'menu_class'     => 'nav-menu' 
+                ) ); ?>
             </div>
             <div class="footer__nav--secondary">
-                <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
+                <?php wp_nav_menu( array( 
+                'theme_location' => 'secondary', 
+                'menu_class'     => 'nav-menu' 
+                ) ); ?>
             </div>
         </div>
 
