@@ -552,6 +552,12 @@ a:link, .mfp-close, .bbb {
   background-size: cover;
 }
 
+/*.attachment-medium_header {
+  height: 252px;
+  width: 100%;
+  background-size: cover;
+}*/
+
 .medium-hero-title {
   width: 50%;
   margin-left: 15%;

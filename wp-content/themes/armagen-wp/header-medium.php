@@ -52,8 +52,14 @@
             </div>
             <div class="medium-hero-title">
                 <h2 class="medium-title"><?php the_title(); ?></h2>
+                <?php 
+                if ( has_post_thumbnail() ) { 
+                    the_post_thumbnail( 'medium_header' ); 
+                }
+                ?>
                 
             </div>
+
         </div>
         <!-- # hero -->
 

@@ -62,6 +62,7 @@ function armagen_setup() {
 	add_image_size( 'thumbnail', 300, 9999, false );
 	add_image_size( 'large', 980, 9999, false );
 	add_image_size( 'fullwidth', 9999, 9999, false );
+  add_image_size( 'medium_header', 9999, 252, false );
 
 }
 endif; // armagen_setup
