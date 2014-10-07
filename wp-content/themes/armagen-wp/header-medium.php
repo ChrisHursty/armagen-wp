@@ -50,17 +50,23 @@
             <div id="navigation" class="secondary-navigation" role="navigation">
                 <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
             </div>
-            <div class="medium-hero-title">
+            <?php global $post; ?>
+            <?php
+            $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 9999, 252 ), false, '' );
+            ?>
+            <div class="medium-hero-title" style="background: url(<?php echo $src[0]; ?> ) !important;background-size: cover !important;">
                 <h2 class="medium-title"><?php the_title(); ?></h2>
-                <?php 
-                if ( has_post_thumbnail() ) { 
-                    the_post_thumbnail( 'medium_header' ); 
-                }
-                ?>
-                
             </div>
 
         </div>
         <!-- # hero -->
+
+
+
+
+
+
+
+
 
     

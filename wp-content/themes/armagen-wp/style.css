@@ -546,29 +546,17 @@ a:link, .mfp-close, .bbb {
 /* Hero Image - Medium
 ----------------------------------------------- */
 
-.medium-hero {
-  height: 252px;
-  background: url(images/about-hero.jpg);
-  background-size: cover;
-}
-
-/*.attachment-medium_header {
+.medium-hero-title {
   height: 252px;
   width: 100%;
-  background-size: cover;
-}*/
-
-.medium-hero-title {
-  width: 50%;
-  margin-left: 15%;
-  padding-top: 100px;
 }
 
 h2.medium-title {
   color: #fff;
   font-style: italic;
   font-weight: 300;
-  margin-left: 3px;
+  margin-left: 15%;
+  padding-top: 100px;
 }
 
 
@@ -599,6 +587,18 @@ h2.small-title {
   font-style: italic;
   font-weight: 300;
   margin-left: 3px;
+}
+
+.default-hero {
+  height: 252px;
+  background: #ea6e1f; /* Old browsers */
+  background: -moz-linear-gradient(left,  #ea6e1f 0%, #5a6d68 50%, #686868 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ea6e1f), color-stop(50%,#5a6d68), color-stop(100%,#686868)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* IE10+ */
+  background: linear-gradient(to right,  #ea6e1f 0%,#5a6d68 50%,#686868 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea6e1f', endColorstr='#686868',GradientType=1 ); /* IE6-9 */
 }
 
 
