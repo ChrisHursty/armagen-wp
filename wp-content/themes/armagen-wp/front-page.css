@@ -160,20 +160,35 @@ h2.home-title {
 ----------------------------------------------------------- */
 
 .one-third {
-  width: 32%;
+  width: 33.33%;
+  padding-right: 6%;
   float: left;
 }
 
 .news-home {
   background:#e6e1d8 url(images/bg_pattern_xy.png) center center;
+  position: relative;
+  padding-left: 15%;
+  padding-right: 15%;
 }
+
 .news-home ul li {
   float:left;
-  display:block;
+  display: block;
   width: 100%;
   min-height: 205px;
   padding: 0 45px;
 }
 
-
-
+/* Tech Section - Home
+----------------------------------------------- */
+.mfp-bottom-bar {
+  background: #000;
+  padding: 20px 15px 15px;
+  margin-top: -4px;
+  color: #fff !important;
+  max-width: 800px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 130%;
+}

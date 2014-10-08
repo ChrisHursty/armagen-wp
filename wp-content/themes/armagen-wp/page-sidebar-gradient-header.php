@@ -7,7 +7,7 @@ get_header( 'small' ); ?>
 
     <div id="primary">
         <div id="content" role="main">
-            <div class="left">
+            <div class="column-left">
                 <?php while ( have_posts() ) : the_post(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -26,7 +26,7 @@ get_header( 'small' ); ?>
             </div>
                     
                 <?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
-                <div class="right">
+                <div class="column-right">
                     <?php dynamic_sidebar( 'right-sidebar' ); ?>
                 </div>
                 <?php endif; ?>

@@ -626,33 +626,12 @@ h2.small-title {
 	padding-right: 30px;
 	color: #eb6d1f;
 }
-.news-home h3:before {
-	content: "";
-	background: url(images/icon_news.svg) no-repeat 0 0;
-	width: 51px;
-	height: 39px;
-	display: block;
-	margin: 0px 12px 12px 0;
-	float: left;
+
 }
 .news-home .date {
 	color:#ea6e1f;
 }
 
-
-
-/* Tech Section - Home
------------------------------------------------ */
-.mfp-bottom-bar {
-  background: #000;
-  padding: 20px 15px 15px;
-  margin-top: -4px;
-  color: #fff !important;
-  max-width: 800px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  line-height: 130%;
-}
 
 /* About - home
 ----------------------------------------------- */
@@ -826,12 +805,12 @@ h2.small-title {
   width: 97%;
 }*/
 
-.left {
+.column-left {
   width: 70%;
   display: inline-block;
 }
  
-.right {
+.column-right {
   float: right;
   width: 27%;
   display: inline-block;
@@ -1018,6 +997,19 @@ article .button:hover {
 	color:#ea6e1f;
 }
 
+a.button {
+  display: inline-block;
+  margin-top:30px;
+  padding:14px 25px;
+  text-transform:uppercase;
+  color:#f3f2ec;
+  text-align: center;
+  border:2px solid #e6e1d8;
+  -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+      border-radius: 8px;
+}
+
 
 /* Back to Top
 ----------------------------------------------- */
@@ -1127,11 +1119,13 @@ a.backtop.rotate {
 	}
 	.technology-home .right .frame {
 		width: 50%;
-		top:20.3%;
+		top: 20.3%;
 		left: 25%;
 	}
 /* Mission */
-	.mission-home .left {width:100%;}
+	.mission-home .left {
+    width: 100%;
+  }
 /* Footer */
 	.footer p.col {
 		float: none;
