@@ -806,6 +806,26 @@ h2.small-title {
 
 
 
+/* Sidebar
+----------------------------------------------- */
+
+/*.left + .right {
+  width: 97%;
+}*/
+
+.left {
+  width: 70%;
+  display: inline-block;
+}
+
+.right {
+  width: 27%;
+  display: inline-block;
+  float: right;
+  background-color: #bcbcbc;
+}
+
+
 
 /* Footer
 ----------------------------------------------- */

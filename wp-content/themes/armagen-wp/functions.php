@@ -149,6 +149,16 @@ function armagen_widgets_init() {
 		'before_title'    => '<h3 class="widget-title">',
 		'after_title'     => '</h3>',
 	) );
+
+    register_sidebar( array (
+    'name'            => __( 'Right Sidebar', 'armagen' ),
+    'id'              => 'right-sidebar',
+    'description'     => 'Sidebar will show only when there is content added to it.',
+    'before_widget'   => '<li id="%1$s" class="widget-container %2$s">',
+    'after_widget'    => "</li>",
+    'before_title'    => '<h4 class="widget-title">',
+    'after_title'     => '</h4>',
+  ) );
 }
 add_action( 'init', 'armagen_widgets_init' );
 
@@ -173,7 +183,7 @@ register_post_type( 'News',
     	'new_item'           => __( 'New News Item' ),
     	'view_item'          => __( 'View News' ),
     	'search_items'       => __( 'Search News' ),
-    	'not_found'          =>  __( 'No News found' ),
+    	'not_found'          => __( 'No News found' ),
     	'not_found_in_trash' => __( 'No News found in Trash' ),
     	'parent_item_colon'  => ''
     ),
@@ -202,7 +212,7 @@ register_post_type( 'Compounds',
 		'new_item'           => __( 'New Compound' ),
 		'view_item'          => __( 'View Compound' ),
 		'search_items'       => __( 'Search Compounds' ),
-		'not_found'          =>  __( 'No Compounds found' ),
+		'not_found'          => __( 'No Compounds found' ),
 		'not_found_in_trash' => __( 'No Compounds found in Trash' ),
 		'parent_item_colon'  => ''
     ),
@@ -222,22 +232,22 @@ register_post_type( 'Compounds',
 /*-----------------------------------------------------------------------------------*/
 // Remove links from menu
 function edit_admin_menus() {  
-    remove_menu_page('edit.php'); // Remove Posts 
+  remove_menu_page('edit.php'); // Remove Posts 
 	remove_menu_page('link-manager.php'); // Remove Links
 }  
 add_action( 'admin_menu', 'edit_admin_menus' ); 
 
 // Define Order of Menu
 function custom_menu_order($menu_ord) {  
-    if (!$menu_ord) return true; 
-    return array(  
-        'index.php', // Dashboard  
-        'separator1', // First separator  
-		
-		'edit.php?post_type=page', // Pages 
-        'upload.php', // Media  
-        'edit-comments.php', // Comments 
-    );  
+  if (!$menu_ord) return true; 
+  return array(  
+    'index.php', // Dashboard  
+    'separator1', // First separator  
+	
+	'edit.php?post_type=page', // Pages 
+    'upload.php', // Media  
+    'edit-comments.php', // Comments 
+  );  
 }
 add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order  
 add_filter('menu_order', 'custom_menu_order');  

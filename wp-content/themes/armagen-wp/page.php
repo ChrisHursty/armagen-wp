@@ -5,7 +5,7 @@
  * @package ArmaGen
  */
 
-get_header( 'small' ); ?>
+get_header( 'medium' ); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
@@ -29,5 +29,5 @@ get_header( 'small' ); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
-
+<?php is_active_sidebar( 'right-sidebar' ); ?>
 <?php get_footer(); ?>

@@ -11,7 +11,7 @@
  * @package ArmaGen
  */
 
-get_header(); ?>
+get_header( 'medium' ); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
