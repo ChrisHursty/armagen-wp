@@ -54,6 +54,39 @@
             </div>
         </section>
         <!-- # news -->
+            <section id="technology" class="technology-home">
+        <div class="tech-wrap clearfix">
+            <div class="right">
+                <?php 
+                $techwrapimg = get_field('tech_home_img');
+                if( !empty($techwrapimg) ): ?>
+                    <img src="<?php echo $techwrapimg['url']; ?>" alt="<?php echo $techwrapimg['alt']; ?>" />
+                <?php endif; ?>
+            </div>
+            <div class="left">
+                <h3><?php the_field('tech_home_title'); ?></h3>
+                <div class="bbb">
+                <?php 
+                $techimage = get_field('bbb_img');
+                if( !empty($techimage) ): 
+                    // vars
+                    $url = $techimage['url'];
+                    $title = $techimage['title'];
+                    $alt = $techimage['alt'];
+                    $caption = $techimage['caption'];
+                    // thumbnail
+                    $size = 'thumbnail';
+                    $thumb = $techimage['sizes'][ $size ];
+                    if( $caption ): ?>
+                    <?php endif; ?>
+                    <a href="<?php echo $url; ?>" class="image-link" title="<?php echo $caption; ?>"><img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" /></a>
+                <?php endif; ?>
+                </div>
+                <?php the_field('tech_home_text'); ?>
+            </div>
+         </div>
+    </section>
+    <!-- # technology -->
 
     <?php endwhile; ?>
 

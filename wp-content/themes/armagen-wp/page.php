@@ -5,7 +5,7 @@
  * @package ArmaGen
  */
 
-get_header( 'medium' ); ?>
+get_header( 'small' ); ?>
 
 	<div id="primary">
 		<div id="content" role="main">
