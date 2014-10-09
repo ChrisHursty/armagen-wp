@@ -176,8 +176,28 @@ h2.home-title {
   float:left;
   display: block;
   width: 100%;
-  min-height: 205px;
-  padding: 0 45px;
+}
+
+.orange-button {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 14px 25px;
+  text-transform: uppercase;
+  color: #ea6e1f;
+  text-align: center;
+  border: 2px solid #ea6e1f;
+  -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+      border-radius: 8px;
+}
+
+.orange-button:hover {
+  border: 2px solid #5a6d68;
+  background: #5a6d68;
+  color: #fff;
 }
 
 /* Tech Section - Home
@@ -192,3 +212,66 @@ h2.home-title {
   font-weight: 300;
   line-height: 130%;
 }
+
+
+/* Owl Carousel - Home Page
+----------------------------------------------- */
+
+.timeline-home {
+  display: block;
+}
+
+.owl-carousel {
+  min-height: 300px !important;
+}
+
+.timeline-header {
+  padding: 20px 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #cfcfcf;
+  text-align: center;
+  color: #989898;
+  font-size: 3rem;
+  font-size: 30px;
+}
+
+.timeline-entry {
+  border-right: 1px solid #cfcfcf;
+  text-align: center;
+}
+
+.timeline-title {
+  margin:  0 40px 40px;
+  padding-top: 20px;
+  color: #ea6e1f;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  line-height: 135%;
+  font-size: 2rem;
+  font-size: 20px;
+}
+
+.timeline-text {
+  margin: 0px 40px 12px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  line-height: 135%;
+  font-size: 1.2rem;
+  font-size: 12px;
+}
+
+.timeline-date {
+  display: block;
+  margin: 12px 0 0;
+  padding-top: 8px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-size: 14px;
+  border-top: 3px solid #ea6e1f;
+}
+
+
+
+

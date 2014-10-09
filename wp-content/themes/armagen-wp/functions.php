@@ -226,6 +226,51 @@ register_post_type( 'Compounds',
   );
 }
 
+function timeline_posttype() {
+    
+    $labels = array(
+        'name'               => 'Timeline Entries',
+        'singular_name'      => 'Timeline Entry',
+        'menu_name'          => 'Home Page Timeline',
+        'name_admin_bar'     => 'Timeline',
+        'add_new'            => 'Add New Entry',
+        'add_new_item'       => 'Add New Timeline Entry',
+        'new_item'           => 'New Timeline Entry',
+        'edit_item'          => 'Edit Timeline Entry',
+        'view_item'          => 'View Timeline Entry',
+        'all_items'          => 'All Timeline Entries',
+        'search_items'       => 'Search Timeline Entries',
+        'parent_item_colon'  => 'Parent Timeline Entry:',
+        'not_found'          => 'No timeline entries found.',
+        'not_found_in_trash' => 'No timeline entries found in Trash.',
+    );
+    
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'menu_icon'          => 'dashicons-images-alt',
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'timeline-entry' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'supports'           => array( 'title', 'excerpt' )
+    );
+    register_post_type( 'timeline-entry', $args );
+}
+add_action( 'init', 'timeline_posttype' );
+
+// Flush rewrite rules to add "review" as a permalink slug
+function my_rewrite_flush() {
+    timeline_posttype();
+    flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'my_rewrite_flush' );
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Editing the backend admin menu
@@ -303,6 +348,7 @@ add_action('wp_enqueue_scripts', 'homepage_scripts');
 
 
 function custom_excerpt_length( $length ) {
-  return 12;
+  return 8;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+

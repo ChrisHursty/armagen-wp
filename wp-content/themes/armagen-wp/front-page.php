@@ -18,8 +18,8 @@
         <section id="" class="news-home">
             <div class="clearfix">
                 <div class="one-third">
-                    <h3 class="sub-title">Recent News</h3>
                     <ul class="">
+                    <h3 class="sub-title">Recent News</h3>
                         <?php query_posts(array(
                             'post_type'      => 'news',
                             'posts_per_page' => 2,
@@ -31,27 +31,27 @@
                         <li>
                             <a class="news" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_date('m-Y-d', '<h4>', '</h4>'); ?></a>
                             <p><?php the_excerpt('custom_excerpt_length'); ?></p>
-                            <a class="button">Learn More</a>
                         </li>
                         <?php
                             endwhile;
                             wp_reset_query();
                         ?>
                     </ul>
+                    <a class="orange-button" href="/news">More News</a>
                 </div>
                 <div class="one-third">
                     <h3 class="sub-title"><?php the_field('custom_content_title_middle'); ?></h3>
                     <p>
                         <?php the_field('custom_content_text_middle'); ?>
                     </p>
-                    <a class="button"><?php the_field('custom_content_button_text_middle'); ?></a>
+                    <a class="orange-button" href="<?php the_field('button_link_middle'); ?>">Learn More</a>
                 </div>
                 <div class="one-third">
                     <h3 class="sub-title"><?php the_field('custom_content_title_right'); ?></h3>
                     <p>
                         <?php the_field('custom_content_text_right'); ?>
                     </p>
-                    <a class="button"><?php the_field('custom_content_button_text_right'); ?></a>
+                    <a class="orange-button" href="<?php the_field('button_link_middle'); ?>">Learn More</a>
                 </div>
             </div> <!-- /.clearfix -->
         </section>
@@ -88,6 +88,93 @@
                 </div>
             </div>
         </section>
+        <!-- # /technology -->
+
+        <!-- timeline -->
+        <section id="timeline" class="timeline-home">
+            <div class="timeline-header">Advancing Research for the Brain: A Timeline</div>
+            <div id="owl-example" class="owl-carousel">
+                <div class="timeline-entry">
+                    <div class="timeline-title">
+                        Donec id elit non mi porta gravida at eget metus
+                    </div>
+                    <div class="timeline-text">
+                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    </div>
+                    <div class="timeline-date">
+                        Dec <strong>2006</strong>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-title">
+                        Donec id elit non mi porta gravida at eget metus
+                    </div>
+                    <div class="timeline-text">
+                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    </div>
+                    <div class="timeline-date">
+                        Dec <strong>2006</strong>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-title">
+                        Donec id elit non mi porta gravida at eget metus
+                    </div>
+                    <div class="timeline-text">
+                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    </div>
+                    <div class="timeline-date">
+                        Dec <strong>2006</strong>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-title">
+                        Donec id elit non mi porta gravida at eget metus
+                    </div>
+                    <div class="timeline-text">
+                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    </div>
+                    <div class="timeline-date">
+                        Dec <strong>2006</strong>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-title">
+                        Donec id elit non mi porta gravida at eget metus
+                    </div>
+                    <div class="timeline-text">
+                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    </div>
+                    <div class="timeline-date">
+                        Dec <strong>2006</strong>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-title">
+                        Donec id elit non mi porta gravida at eget metus
+                    </div>
+                    <div class="timeline-text">
+                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    </div>
+                    <div class="timeline-date">
+                        Dec <strong>2006</strong>
+                    </div>
+                </div>
+                <div class="timeline-entry">
+                    <div class="timeline-title">
+                        Donec id elit non mi porta gravida at eget metus
+                    </div>
+                    <div class="timeline-text">
+                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+                    </div>
+                    <div class="timeline-date">
+                        Dec <strong>2006</strong>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <!-- # /timeline -->
 
         <!-- mission -->
         <?php if( get_field('mission_home_bg') ): ?>
@@ -98,10 +185,7 @@
                 </div>
             </section>
         <?php endif; ?>
-        <!-- # mission -->
-    
-    </section>
-    <!-- # technology -->
+        <!-- # /mission -->
 
     <?php endwhile; ?>
 

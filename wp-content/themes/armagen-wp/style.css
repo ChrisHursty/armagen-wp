@@ -608,17 +608,15 @@ h2.small-title {
 	background:#e6e1d8 url(images/bg_pattern_xy.png) center center;
 }
 .news-home ul li {
-	float:left;
-	display:block;
-	width:33%;
-	min-height:205px;
-	padding:45px;
-	border-left:1px solid #f4f2ec;
+	float: left;
+	display: block;
+	width: 33%;
+	padding: 0px;
 }
 
 .news-home ul li:first-child {
-	border-left:none;
-	padding: 0 0 0 15%;
+	border-left: none;
+	padding: 0px;
 }
 
 .news-home h3 {
@@ -1161,7 +1159,7 @@ a.backtop.rotate {
 	.news-home ul li {
 		width: 50%;
 		min-height: 0;
-		padding: 15px 45px 55px;
+		padding: 15px 0px 55px;
 		border-left: none;
 	}
 
@@ -1412,7 +1410,7 @@ a.backtop.rotate {
 	.news-home {padding-bottom: 55px;}
 	.news-home ul li {
 		width:100%;
-		padding: 15px 45px 0;
+		padding: 15px 0;
 	}
 	.news-home h3:before {
 		display: none;
