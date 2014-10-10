@@ -110,6 +110,25 @@ if(!Modernizr.svg) {
 	});
 
 
+/**
+ * Owlslider
+*/
+/* Homepage Timeline */
+	
+		$("#timeline-slider").owlCarousel({
+			navigation : true,
+			autoPlay : false,
+			pagination : false,
+			navigationText : ["<span>‹</span>","<span>›</span>"],
+			//scrollPerPage : true,
+			items : 5,
+			itemsDesktop : false,
+			itemsDesktopSmall : false,
+			itemsTablet: false,
+			itemsMobile : [800,1]
+		});
+		//$(this).find(".owl-prev span").addClass("rotate");
+
 
 
 

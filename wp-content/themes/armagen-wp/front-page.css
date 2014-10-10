@@ -221,8 +221,12 @@ h2.home-title {
   display: block;
 }
 
-.owl-carousel {
+#timeline-slider {
   min-height: 300px !important;
+}
+
+ul#timeline-slider {
+  list-style: none;
 }
 
 .timeline-header {

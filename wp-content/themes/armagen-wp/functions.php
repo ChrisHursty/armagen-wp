@@ -86,7 +86,7 @@ function armagen_scripts() {
 
 	wp_enqueue_style( 'armagen-style', get_stylesheet_uri(), '', '2.3.0' );
 	
-	wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/modernizr.js', 'jquery', '1.0');
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', 'jquery', '1.0');
 	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/theme.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'customjs', get_template_directory_uri() . '/js/jquery.custom.js', array( 'jquery' ), false, true );
 
@@ -226,50 +226,37 @@ register_post_type( 'Compounds',
   );
 }
 
-function timeline_posttype() {
-    
-    $labels = array(
-        'name'               => 'Timeline Entries',
-        'singular_name'      => 'Timeline Entry',
-        'menu_name'          => 'Home Page Timeline',
-        'name_admin_bar'     => 'Timeline',
-        'add_new'            => 'Add New Entry',
-        'add_new_item'       => 'Add New Timeline Entry',
-        'new_item'           => 'New Timeline Entry',
-        'edit_item'          => 'Edit Timeline Entry',
-        'view_item'          => 'View Timeline Entry',
-        'all_items'          => 'All Timeline Entries',
-        'search_items'       => 'Search Timeline Entries',
-        'parent_item_colon'  => 'Parent Timeline Entry:',
-        'not_found'          => 'No timeline entries found.',
-        'not_found_in_trash' => 'No timeline entries found in Trash.',
-    );
-    
-    $args = array(
-        'labels'             => $labels,
-        'public'             => true,
-        'publicly_queryable' => true,
-        'show_ui'            => true,
-        'show_in_menu'       => true,
-        'menu_icon'          => 'dashicons-images-alt',
-        'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'timeline-entry' ),
-        'capability_type'    => 'post',
-        'has_archive'        => true,
-        'hierarchical'       => false,
-        'menu_position'      => 5,
-        'supports'           => array( 'title', 'excerpt' )
-    );
-    register_post_type( 'timeline-entry', $args );
-}
-add_action( 'init', 'timeline_posttype' );
 
-// Flush rewrite rules to add "review" as a permalink slug
-function my_rewrite_flush() {
-    timeline_posttype();
-    flush_rewrite_rules();
+/**
+ * Compounds
+*/
+add_action( 'init', 'create_post_type_timeline' );
+function create_post_type_timeline() {
+register_post_type( 'Timeline',
+    array(
+    'labels'             => array(
+    'name'               => __( 'Timeline' ),
+    'singular_name'      => __( 'Timeline' ),    
+    'add_new'            => _x( 'Add Timeline', 'Timeline' ),
+    'add_new_item'       => __( 'Add Timeline' ),
+    'edit_item'          => __( 'Edit Timeline' ),
+    'new_item'           => __( 'New Timeline' ),
+    'view_item'          => __( 'View Timeline' ),
+    'search_items'       => __( 'Search Timelines' ),
+    'not_found'          => __( 'No Timelines found' ),
+    'not_found_in_trash' => __( 'No Timelines found in Trash' ),
+    'parent_item_colon'  => ''
+    ),
+    'public'    => true,
+    'supports'  => array('title','editor','thumbnail' ),
+    'query_var' => true,
+    'rewrite'   => array( 
+        'slug' => 'timeline'
+        ),
+    )
+  );
 }
-register_activation_hook( __FILE__, 'my_rewrite_flush' );
+
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -352,3 +339,21 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+
+/**
+ * Add Owl Carousel to homepage
+ */
+function owl_enqueue_script() {
+  if ( is_front_page() ) {
+    wp_register_script( 'owlslider', get_template_directory_uri() . '/plugins/owl-carousel/owl.carousel.min.js', 'jquery', '', TRUE);
+  wp_enqueue_script( 'owlslider' );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'owl_enqueue_script' );
+function owl_enqueue_style() {
+  if ( is_front_page() ) {
+    wp_register_style( 'owlslidercss', get_template_directory_uri() . '/plugins/owl-carousel/owl.carousel.css');
+  wp_enqueue_style( 'owlslidercss' );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'owl_enqueue_style' );

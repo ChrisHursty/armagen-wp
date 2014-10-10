@@ -89,91 +89,39 @@
             </div>
         </section>
         <!-- # /technology -->
-
+        
         <!-- timeline -->
         <section id="timeline" class="timeline-home">
             <div class="timeline-header">Advancing Research for the Brain: A Timeline</div>
-            <div id="owl-example" class="owl-carousel">
-                <div class="timeline-entry">
-                    <div class="timeline-title">
-                        Donec id elit non mi porta gravida at eget metus
-                    </div>
-                    <div class="timeline-text">
-                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                    </div>
-                    <div class="timeline-date">
-                        Dec <strong>2006</strong>
-                    </div>
-                </div>
-                <div class="timeline-entry">
-                    <div class="timeline-title">
-                        Donec id elit non mi porta gravida at eget metus
-                    </div>
-                    <div class="timeline-text">
-                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                    </div>
-                    <div class="timeline-date">
-                        Dec <strong>2006</strong>
-                    </div>
-                </div>
-                <div class="timeline-entry">
-                    <div class="timeline-title">
-                        Donec id elit non mi porta gravida at eget metus
-                    </div>
-                    <div class="timeline-text">
-                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                    </div>
-                    <div class="timeline-date">
-                        Dec <strong>2006</strong>
-                    </div>
-                </div>
-                <div class="timeline-entry">
-                    <div class="timeline-title">
-                        Donec id elit non mi porta gravida at eget metus
-                    </div>
-                    <div class="timeline-text">
-                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                    </div>
-                    <div class="timeline-date">
-                        Dec <strong>2006</strong>
-                    </div>
-                </div>
-                <div class="timeline-entry">
-                    <div class="timeline-title">
-                        Donec id elit non mi porta gravida at eget metus
-                    </div>
-                    <div class="timeline-text">
-                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                    </div>
-                    <div class="timeline-date">
-                        Dec <strong>2006</strong>
-                    </div>
-                </div>
-                <div class="timeline-entry">
-                    <div class="timeline-title">
-                        Donec id elit non mi porta gravida at eget metus
-                    </div>
-                    <div class="timeline-text">
-                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                    </div>
-                    <div class="timeline-date">
-                        Dec <strong>2006</strong>
-                    </div>
-                </div>
-                <div class="timeline-entry">
-                    <div class="timeline-title">
-                        Donec id elit non mi porta gravida at eget metus
-                    </div>
-                    <div class="timeline-text">
-                        Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                    </div>
-                    <div class="timeline-date">
-                        Dec <strong>2006</strong>
-                    </div>
-                </div>
-            </div>
             
+                <ul id="timeline-slider"class="owl-carousel">
+                    <?php query_posts(array(
+                        'numberposts' => -1,
+                        'post_type' => 'timeline',
+                        'paged' => $paged,
+                        'orderby' => 'menu_order',
+                        'order' => 'ASC'
+                    )); ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                    <li class="timeline-entry">
+                        <div class="timeline-title">
+                            <?php the_title(); ?>
+                        </div>
+                        <div class="timeline-text">
+                            <?php the_field('timeline_text'); ?>
+                        </div>
+                        <div class="timeline-date">
+                            <?php the_field('timeline_date'); ?>
+                        </div>                        
+                    </li>
+
+                    <?php
+                        endwhile;
+                        wp_reset_query();
+                    ?>
+                </ul>            
         </section>
+
         <!-- # /timeline -->
 
         <!-- mission -->

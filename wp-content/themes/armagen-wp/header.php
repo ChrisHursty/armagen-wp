@@ -20,14 +20,6 @@
 <!--[if (lt IE 9) & (!IEMobile)]>
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie.css">
 <![endif]-->
-<!-- Important Owl stylesheet -->
-<link rel="stylesheet" href="<?php get_template_directory_uri(); ?>/wp-content/themes/armagen-wp/owl-carousel/owl.carousel.css">
-<!-- Default Theme -->
-<link rel="stylesheet" href="<?php get_template_directory_uri(); ?>/wp-content/themes/armagen-wp/owl-carousel/owl.theme.css">
-<!--  jQuery 1.7+  -->
-<script src="jquery-1.9.1.min.js"></script>
-<!-- Include js plugin -->
-<script src="<?php get_template_directory_uri(); ?>/wp-content/themes/armagen-wp/owl-carousel/owl.carousel.js"></script>
 <?php wp_head(); ?>
 </head>
 
