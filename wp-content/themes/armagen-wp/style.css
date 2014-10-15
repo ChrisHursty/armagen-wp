@@ -796,12 +796,20 @@ h2.small-title {
 
 
 
-/* Sidebar
+/* Sidebar Or No Sidebar
 ----------------------------------------------- */
 
-/*.left + .right {
-  width: 97%;
-}*/
+.shrink {
+  float: left;
+  width: 65%;
+}
+.sidebar {
+  display: block;
+  float: right;
+  width: 30%;
+  margin: 0 0 3em 5%;
+  padding: 2em;
+}
 
 .column-left {
   width: 70%;
