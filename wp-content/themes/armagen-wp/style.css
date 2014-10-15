@@ -1061,14 +1061,6 @@ a.backtop.rotate {
   }
 }
 
-@media (min-width: 1300px) {
-	.one_half p {
-		padding-left:45%;
-	}
-	.one_half.last_column p {
-		padding-left:0 !important; padding-right:45%;
-	}
-}
 @media (min-width: 1024px) and (max-width: 1299px) {
 	.one_half p {
 		padding-left:35%;
