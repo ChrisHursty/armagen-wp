@@ -679,7 +679,7 @@ h2.small-title {
 }
 
 /* Magnific Popup */
-.compound-modal {
+.timeline-modal {
 	position: relative;
 	background: #fff;
 	padding: 0px;
@@ -689,15 +689,16 @@ h2.small-title {
 	-webkit-box-shadow: 0 0 12px #4c4b49;
 		box-shadow: 0 0 12px #4c4b49;
 }
-.compound-modal h3 {
+.timeline-modal h3 {
 	color:#fff;
 	padding:30px;
 	text-align:center;
+	background:#ea6e1f;
 }
-.compound-modal p {
+.timeline-modal p {
 	padding:30px;
 }
-.compound-modal p + p {
+.timeline-modal p + p {
 	padding-top:0px;
 }
 
@@ -796,20 +797,12 @@ h2.small-title {
 
 
 
-/* Sidebar Or No Sidebar
+/* Sidebar
 ----------------------------------------------- */
 
-.shrink {
-  float: left;
-  width: 65%;
-}
-.sidebar {
-  display: block;
-  float: right;
-  width: 30%;
-  margin: 0 0 3em 5%;
-  padding: 2em;
-}
+/*.left + .right {
+  width: 97%;
+}*/
 
 .column-left {
   width: 70%;

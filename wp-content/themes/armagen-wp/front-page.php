@@ -109,12 +109,14 @@
                         </div>
                         <div class="timeline-text">
                             <?php the_field('timeline_text'); ?>
+							<a class="modal-link" href="#<?php the_field('modal_id'); ?>" title="more">more</a> 
                         </div>
                         <div class="timeline-date">
                             <?php the_field('timeline_date'); ?>
-                        </div>                        
+                        </div>  
+						<div id="<?php the_field('modal_id'); ?>" class="timeline-modal mfp-hide"><h3><?php the_title(); ?></h3><?php the_field('timeline_text'); ?></div>                
                     </li>
-
+					
                     <?php
                         endwhile;
                         wp_reset_query();
