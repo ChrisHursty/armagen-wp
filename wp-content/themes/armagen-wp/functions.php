@@ -189,7 +189,7 @@ register_post_type( 'News',
     	'parent_item_colon'  => ''
     ),
     'public'    => true,
-    'supports'  => array('title','editor','thumbnail' ),
+    'supports'  => array('title','editor','excerpt' ),
     'query_var' => true,
     'rewrite'   => array( 
         'slug' => 'news'
@@ -217,11 +217,12 @@ register_post_type( 'Compounds',
 		'not_found_in_trash' => __( 'No Compounds found in Trash' ),
 		'parent_item_colon'  => ''
     ),
-    'public'    => true,
-    'supports'  => array('title','editor','thumbnail' ),
-    'query_var' => true,
-    'rewrite'   => array( 
-        'slug' => 'compounds'
+    'public'      => true,
+    'has_archive' => true,
+    'supports'    => array('title','editor','thumbnail' ),
+    'query_var'   => true,
+    'rewrite'     => array( 
+        'slug'    => 'compounds'
         ),
     )
   );
@@ -229,7 +230,7 @@ register_post_type( 'Compounds',
 
 
 /**
- * Compounds
+ * Timeline
 */
 add_action( 'init', 'create_post_type_timeline' );
 function create_post_type_timeline() {

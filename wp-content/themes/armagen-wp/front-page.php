@@ -29,8 +29,8 @@
                         ); ?>
                         <?php while (have_posts()) : the_post(); ?>
                         <li>
-                            <a class="news" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_date('m-Y-d', '<h4>', '</h4>'); ?></a>
-                            <p><?php the_excerpt('custom_excerpt_length'); ?></p>
+                            <p class="date small caps"><?php the_field('pub_date'); ?></p>
+                            <p><a class="news" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
                         </li>
                         <?php
                             endwhile;
