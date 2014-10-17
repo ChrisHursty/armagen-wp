@@ -51,13 +51,15 @@
                 <?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_class' => 'nav-menu' ) ); ?>
             </div>
             <div class="small-hero-title">
-                <?php 
-                if ( is_singular('news') ) { 
-                    echo '<h2 class="small-title">News</h2>';
-                } else {
-                    echo '<h2 class="small-title">' . get_the_title() .'</h2>';
-                }
-            ?>       
+			
+			<?php 
+				if ( is_singular('news') ) { 
+					echo '<h2 class="small-title">News</h2>';
+				} else {
+					echo '<h2 class="small-title">' . get_the_title() .'</h2>';
+				}
+			?>
+        
             </div>
         </div>
         <!-- # hero -->

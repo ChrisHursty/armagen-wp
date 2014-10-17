@@ -132,6 +132,4 @@ if(!Modernizr.svg) {
 
 
 
-
-
 });

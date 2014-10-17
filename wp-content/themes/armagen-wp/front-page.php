@@ -94,7 +94,7 @@
         <section id="timeline" class="timeline-home">
             <div class="timeline-header">Advancing Research for the Brain: A Timeline</div>
             
-                <ul id="timeline-slider"class="owl-carousel">
+                <ul id="timeline-slider" class="owl-carousel">
                     <?php query_posts(array(
                         'numberposts' => -1,
                         'post_type' => 'timeline',
