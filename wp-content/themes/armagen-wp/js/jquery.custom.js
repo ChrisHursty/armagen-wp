@@ -69,6 +69,41 @@ if(!Modernizr.svg) {
 
 
 
+/**
+ * Careers accordion
+*/ 
+if ($("#careers").length > 0) {
+	$("#careers").find("li .short-summary").click(function (e) {
+		var $shortSummary = $(this);
+		var $careerSlideSpeed = 450;
+
+		$("#careers").find("li .job").each(function() {
+			if ($shortSummary.parent().attr("id") != $(this).parent().attr("id")) {
+				$(this).slideUp($careerSlideSpeed);
+			}
+		});
+		$shortSummary.parent().find(".job").slideToggle($careerSlideSpeed);
+	});
+}
+
+
+/**
+ * Team accordion
+*/ 
+if ($("#team").length > 0) {
+	$("#team").find("li .short-details").click(function (e) {
+		var $shortDetails = $(this);
+		var $teamSlideSpeed = 450;
+
+		$("#team").find("li .bio").each(function() {
+			if ($shortDetails.parent().attr("id") != $(this).parent().attr("id")) {
+				$(this).slideUp($teamSlideSpeed);
+				//$(".headshot").css('display','none');
+			}
+		});
+		$shortDetails.parent().find(".bio").slideToggle($teamSlideSpeed);
+	});
+}
 
 
 
@@ -114,7 +149,8 @@ if(!Modernizr.svg) {
  * Owlslider
 */
 /* Homepage Timeline */
-	
+	if ($('body').hasClass('home')) {
+		'use strict';
 		$("#timeline-slider").owlCarousel({
 			navigation : true,
 			autoPlay : false,
@@ -127,7 +163,11 @@ if(!Modernizr.svg) {
 			itemsTablet: false,
 			itemsMobile : [800,1]
 		});
-		//$(this).find(".owl-prev span").addClass("rotate");
+		$(this).find(".owl-prev span").addClass("rotate");
+	}
+
+
+
 
 
 

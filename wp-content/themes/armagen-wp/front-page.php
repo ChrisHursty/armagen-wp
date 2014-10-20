@@ -41,14 +41,14 @@
                 </div>
                 <div class="one-third">
                     <h3 class="sub-title"><?php the_field('custom_content_title_middle'); ?></h3>
-                    <p>
+                    <p class="custom-content">
                         <?php the_field('custom_content_text_middle'); ?>
                     </p>
                     <a class="orange-button" href="<?php the_field('button_link_middle'); ?>">Learn More</a>
                 </div>
                 <div class="one-third">
                     <h3 class="sub-title"><?php the_field('custom_content_title_right'); ?></h3>
-                    <p>
+                    <p class="custom-content">
                         <?php the_field('custom_content_text_right'); ?>
                     </p>
                     <a class="orange-button" href="<?php the_field('button_link_middle'); ?>">Learn More</a>
@@ -94,13 +94,13 @@
         <section id="timeline" class="timeline-home">
             <div class="timeline-header">Advancing Research for the Brain: A Timeline</div>
             
-                <ul id="timeline-slider" class="owl-carousel">
+                <ul id="timeline-slider"class="owl-carousel">
                     <?php query_posts(array(
                         'numberposts' => -1,
-                        'post_type' => 'timeline',
-                        'paged' => $paged,
-                        'orderby' => 'menu_order',
-                        'order' => 'ASC'
+                        'post_type'   => 'timeline',
+                        'paged'       => $paged,
+                        'orderby'     => 'menu_order',
+                        'order'       => 'ASC'
                     )); ?>
                     <?php while (have_posts()) : the_post(); ?>
                     <li class="timeline-entry">
@@ -108,13 +108,20 @@
                             <?php the_title(); ?>
                         </div>
                         <div class="timeline-text">
-                            <?php the_field('timeline_text'); ?>
-							<a class="modal-link" href="#<?php the_field('modal_id'); ?>" title="more">more</a> 
+                            <?php the_field('timeline_author'); ?>
+							<div><a class="button modal-link" href="#<?php the_field('modal_id'); ?>" title="more">more</a></div>
                         </div>
                         <div class="timeline-date">
                             <?php the_field('timeline_date'); ?>
                         </div>  
-						<div id="<?php the_field('modal_id'); ?>" class="timeline-modal mfp-hide"><h3><?php the_title(); ?></h3><?php the_field('timeline_text'); ?></div>                
+						<div id="<?php the_field('modal_id'); ?>" class="timeline-modal mfp-hide">
+							<h3><?php the_field('timeline_date'); ?></h3>
+							<div>
+								<h4><?php the_title(); ?></h4>
+								<h5><?php the_field('timeline_author'); ?></h5>
+								<?php the_field('timeline_text'); ?>
+							</div> 
+						</div>              
                     </li>
 					
                     <?php

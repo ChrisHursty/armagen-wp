@@ -165,6 +165,12 @@ h2.home-title {
   float: left;
 }
 
+.one-third p.custom-content {
+  /*margin-top: -80px;
+  min-height: 100px;*/
+}
+
+
 .news-home {
   background:#e6e1d8 url(images/bg_pattern_xy.png) center center;
   position: relative;
@@ -245,6 +251,7 @@ ul#timeline-slider {
 }
 
 .timeline-title {
+  min-height: 220px;
   margin:  0 40px 40px;
   padding-top: 20px;
   color: #ea6e1f;
@@ -264,10 +271,14 @@ ul#timeline-slider {
   font-size: 12px;
 }
 
+.timeline-text a.button {
+  color: #ea6e1f;
+}
+
 .timeline-date {
   display: block;
   margin: 12px 0 0;
-  padding-top: 8px;
+  padding: 8px 0;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
@@ -276,6 +287,33 @@ ul#timeline-slider {
   border-top: 3px solid #ea6e1f;
 }
 
+.owl-buttons {
+  position: relative;
+}
 
+.owl-prev, .owl-next {
+  position: absolute;
+  padding: 30px 9px;
+  background: #ddd;
+  color: #787878;
+  font-size: 48px;
+}
 
+.owl-prev:hover, .owl-next:hover {
+  cursor: pointer;
+  background: #aaa;
+}
 
+.owl-prev {
+  top: -270px;
+  left: 0px;
+}
+
+.owl-next {
+  top: -270px;
+  right: 0px;
+}
+
+.owl-prev span.rotate, .owl-next span.rotate{
+  text-align: center;
+}

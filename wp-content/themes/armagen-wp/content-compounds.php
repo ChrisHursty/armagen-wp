@@ -18,35 +18,20 @@
 						<?php previous_post_link_plus( array(
 								 'format' => '%link',
 								 'link' => 'Previous',
-								 'tooltip' => 'Previous News Release',
-							) );?>
+								 'tooltip' => 'Previous Compound',
+							) );?>&nbsp;
 						</div>
-						<div class="all"><a href="/news" title="All News">All News</a></div>
-						<div class="next">
+						<div class="all"><a href="/compounds" title="All Compounds">All Compounds</a></div>
+						<div class="next">&nbsp;
 						<?php next_post_link_plus( array(
 								 'format' => '%link',
 								 'link' => 'Next',
-								 'tooltip' => 'Next News Release',
+								 'tooltip' => 'Next Compound',
 							) );?>
 						</div>
 					</div>
 
-					<h3><?php the_title(); ?></h3>
-					
-					<?php the_content(); ?>
-
-
-
-					<section>
-					<?php
-					if(get_field('pdf_download')) {
-						echo '<a class="orange-button" href="' . get_field('pdf_download') . '" target="_blank" title="Download the PDF">Download the PDF</a>';
-					}
-					?>
-					</section>
-
-
-
+					<?php the_field('compound_page_content'); ?>
 
 				</div>
 			</article>

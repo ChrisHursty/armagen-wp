@@ -45,7 +45,7 @@
             </p>
         </div>
         <div class="clearfix"></div>
-        <p class="colfull"><strong>ArmaGen Technologies, Inc.</strong>&nbsp;&nbsp; <small>&copy;Copyright <?php echo date("Y") ?>.  All rights reserved.</small></p>
+        <p class="colfull"><strong>ArmaGen</strong>&nbsp;&nbsp; <small>&copy;Copyright <?php echo date("Y") ?>.  All rights reserved.</small></p>
         </div>
     </div>
 
